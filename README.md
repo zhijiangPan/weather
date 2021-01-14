@@ -11,7 +11,7 @@ $ composer require zhijiangpan/weather -vvv
 
 ### 配置
 
-<p align="center">在使用本扩展之前，你需要去 [高德开放平台](https://console.amap.com/dev/index) 注册账号，然后创建应用，获取应用的 API Key。</p>
+在使用本扩展之前，你需要去 [高德开放平台](https://console.amap.com/dev/index) 注册账号，然后创建应用，获取应用的 API Key。
 
 ### 使用
 
@@ -181,7 +181,6 @@ WEATHER_API_KEY=xxxxxxxxxxxxxxxxxxxxx
 #### 方法参数注入
 
 ```php
-    .
 	.
 	.
 	public function edit(Weather $weather) 
@@ -196,7 +195,6 @@ WEATHER_API_KEY=xxxxxxxxxxxxxxxxxxxxx
 #### 服务器名访问
 
 ```php
-  .
 	.
 	.
 	public function edit() 
