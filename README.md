@@ -2,6 +2,7 @@
 
 <p align="center">基于 <a target=_blank href="https://console.amap.com/dev/index">高德开放平台</a> 的 PHP 天气信息组件</p>
 
+[![Build Status](https://travis-ci.org/zhijiangPan/weather.svg?branch=master)](https://travis-ci.org/zhijiangPan/weather)
 ____
 ### 安装
 
