@@ -117,7 +117,7 @@ class WeatherTest extends TestCase
     {
         $client = \Mockery::mock(Client::class);
         $client->allows()
-            ->get(new AnyArgs)// 由于上面的用例已经验证过参数传递，所以这里就不关心参数了。
+            ->get(new AnyArgs())// 由于上面的用例已经验证过参数传递，所以这里就不关心参数了。
             ->andThrow(new \Exception('request timeout')); // 当调用 get 方法时会抛出异常。
 
         $w = \Mockery::mock(Weather::class, ['mock-key'])->makePartial();

@@ -29,21 +29,23 @@ class Weather
      * @param $city
      * @param string $type
      * @param string $format
-     * @return mixed|string
+     *
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \ZhijiangPan\Weather\HttpException
      * @throws \ZhijiangPan\Weather\InvalidArgumentException
+     *
+     * @return mixed|string
      */
     public function getWeather($city, $type = 'base', $format = 'json')
     {
         $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
 
         if (!in_array(strtolower($format), ['json', 'xml'])) {
-            throw new InvalidArgumentException('Invalid response format:' . $format);
+            throw new InvalidArgumentException('Invalid response format:'.$format);
         }
 
         if (!in_array(strtolower($type), ['base', 'all'])) {
-            throw new InvalidArgumentException('Invalid type value(base/all): ' . $type);
+            throw new InvalidArgumentException('Invalid type value(base/all): '.$type);
         }
 
         $query = array_filter([
@@ -68,10 +70,12 @@ class Weather
     /**
      * @param $city
      * @param string $format
-     * @return mixed|string
+     *
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \ZhijiangPan\Weather\HttpException
      * @throws \ZhijiangPan\Weather\InvalidArgumentException
+     *
+     * @return mixed|string
      */
     public function getLiveWeather($city, $format = 'json')
     {
@@ -81,10 +85,12 @@ class Weather
     /**
      * @param $city
      * @param string $format
-     * @return mixed|string
+     *
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \ZhijiangPan\Weather\HttpException
      * @throws \ZhijiangPan\Weather\InvalidArgumentException
+     *
+     * @return mixed|string
      */
     public function getForecastsWeather($city, $format = 'json')
     {
